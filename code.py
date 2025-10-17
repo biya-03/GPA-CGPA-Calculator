@@ -57,11 +57,11 @@ for sem in semesters:
         st.subheader(f"Subject {i+1}")
         marks = st.number_input(
             f"Enter Marks for Subject {i+1}",
-            min_value=0, max_value=100, key=f"marks_{sem}_{i}"
+            min_value=0, max_value=100, step=1, key=f"marks_{sem}_{i}"
         )
         credits = st.number_input(
             f"Enter Credit Hours for Subject {i+1}",
-            min_value=1, max_value=5, key=f"credit_{sem}_{i}"
+            min_value=1, max_value=5, step=1, key=f"credit_{sem}_{i}"
         )
         subjects.append({"marks": marks, "credits": credits})
     semester_data[sem] = subjects
@@ -91,3 +91,4 @@ if st.button("Calculate GPA & CGPA"):
     st.write(f"**{results[-1]['CGPA (Cumulative)']:.2f}**")
 
     st.caption("Formula: CGPA = Total Grade Points Earned ÷ Total Credit Hours Taken")
+
