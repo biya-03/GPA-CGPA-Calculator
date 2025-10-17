@@ -7,27 +7,29 @@ st.title("🎓 GPA & CGPA Calculator (4 Semesters)")
 
 st.write("""
 This app helps you calculate GPA for each of the 4 semesters and 
-the **CGPA (Cumulative GPA) after each semester** using your marks and credit hours.
+the **CGPA (Cumulative GPA)** after each semester using your marks and credit hours.
 """)
 
-# Grade scale function
+# Updated grade scale function
 def marks_to_gpa(marks):
     if marks >= 85:
         return 4.0
     elif marks >= 80:
-        return 3.7
+        return 3.5
     elif marks >= 75:
-        return 3.3
-    elif marks >= 70:
-        return 3.0
-    elif marks >= 65:
-        return 2.7
+        return 3.2
+    elif marks >= 71:
+        return 2.8
+    elif marks >= 68:
+        return 2.5
+    elif marks >= 64:
+        return 2.2
     elif marks >= 61:
-        return 2.3
+        return 1.9
     elif marks >= 58:
-        return 2.0
-    elif marks >= 55:
-        return 1.7
+        return 1.6
+    elif marks >= 54:
+        return 1.3
     elif marks >= 50:
         return 1.0
     else:
@@ -91,4 +93,3 @@ if st.button("Calculate GPA & CGPA"):
     st.write(f"**{results[-1]['CGPA (Cumulative)']:.2f}**")
 
     st.caption("Formula: CGPA = Total Grade Points Earned ÷ Total Credit Hours Taken")
-
