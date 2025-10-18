@@ -7,7 +7,6 @@ st.title("🎓 GPA & CGPA Calculator (4 Semesters)")
 
 st.write("""
 This web app calculates GPA for each of 4 semesters and the Cumulative GPA (CGPA) after each one.
-It follows your provided grading system (which gives a CGPA of 3.21 for your first semester).
 """)
 
 # ---------- Function Definitions ----------
